@@ -1,13 +1,70 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@import-normalize;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer components {
+    /* First Page */
+    .main-page-without-popup{
+        @apply flex items-center justify-center h-screen
+    }
+    
+    .main-page-with-popup {
+        @apply flex items-center justify-center h-screen bg-[#808080]
+    }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    .show-cart-button {
+        @apply flex items-center justify-center w-[150px] h-[80px] bg-slate-400
+    }
+
+    /* //PopUpWindow */
+
+    .popup-window {
+        @apply flex flex-col sm:w-4/6 flex-wrap  bg-white
+    }
+
+    .popup-window-headline {
+        @apply flex w-full h-[30px] content-center justify-center
+    }
+
+    .popup-window-cart {
+        @apply flex w-full h-[50px] justify-around bg-lime-100
+    }
+
+    .popup-window-images {
+        @apply w-[30px] h-[30px] m-[10px]
+    }
+
+    .popup-window-offers {
+        @apply flex flex-col w-full justify-center content-center
+    }
+
+    .popup-window-offers-offer {
+        @apply flex m-5 sm:w-2/3 self-center justify-between
+    }
+
+    .popup-window-offers-offer-info {
+        @apply flex flex-col mr-[20px]
+    }
+
+    .popup-window-offers-offer-p {
+        @apply m-3 self-center
+    }
+
+    .popup-window-offers-offer-add-button {
+        @apply w-[100px] h-[30px] font-bold text-white bg-lime-400 border-transparent
+    }
+
+    .popup-window-offers-offer-remove-button {
+        @apply w-[100px] h-[30px] font-bold text-white bg-red-500 border-transparent
+    }
+
+    .popup-window-submission-section {
+        @apply flex justify-end m-10 w-full
+    }
+
+    .popup-window-submission-section-button {
+        @apply w-[200px] h-[30px] mr-20 font-bold text-white bg-lime-400
+    }
+
 }
