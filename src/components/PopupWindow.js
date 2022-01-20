@@ -25,7 +25,7 @@ function PopupWindow(props) {
                 />
             </div>
             <div className="popup-window-submission-section group">
-                <button className="popup-window-submission-section-button group" datatestid="confirmSubmission" onClick={props.alertWindow}>Confirm Submission</button>
+                <button className="popup-window-submission-section-button group" datatestid="confirmSubmission" onClick={props.submission}>Confirm Submission</button>
             </div>
         </div> 
     );
