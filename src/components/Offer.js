@@ -9,7 +9,15 @@ function Offer (props) {
     return (
         <div className="popup-window-offers-offer group">
             <div className="flex">
-                <img className= "popup-window-images group" src={props.image}></img>
+                <img className= "popup-window-images group" 
+                    src={props.image} 
+                    // fallback image in case of error (for gift and start icon I was getting 404)
+                    onError={({ currentTarget }) => {
+                        currentTarget.onerror = null; // prevents looping
+                        currentTarget.src=props.fallbackImage;
+                      }}
+                    >
+                </img>
                 <div className="popup-window-offers-offer-info group">
                     <div className="flex m0"> 
                         <strong className="popup-window-offers-offer-p"><p>{props.title} </p></strong>

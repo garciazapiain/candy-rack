@@ -22,4 +22,4 @@ Open [http://localhost:3000] in your browser.
 
 ### `npx cypress open`
 
-Once dashboard appears, select ui-test.spec.js to run test.
+On a separate terminal while running app, run the above command. Once Cypress dashboard appears, select ui-test.spec.js to run test.

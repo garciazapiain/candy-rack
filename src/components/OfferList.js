@@ -2,6 +2,7 @@ import React from "react";
 import Offer from "./Offer";
 
 function OffersList (props) {
+    const fallbackImages = ["https://img.icons8.com/ios-filled/50/000000/reflector-bulb.png","https://img.icons8.com/ios/50/000000/gift--v2.png","https://img.icons8.com/fluency-systems-regular/48/000000/star--v1.png"]
     const offersList = props.offersData.map(offer => {
         return (
             <Offer
@@ -15,6 +16,7 @@ function OffersList (props) {
                 updateCartAdd={props.updateCartAdd}
                 updateCartRemove={props.updateCartRemove}
                 offerSelected={(props.cartIds).indexOf(offer.id)}
+                fallbackImage = {fallbackImages[(offer.id)-1]}
             />
         )
     })
